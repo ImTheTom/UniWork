@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    h1(class="display-2 tagHeading") #{hashtag}
+    p(class="subHeading")= "Updated " + fs.serverScriptModule.timeSinceDate(book.lastUpdated, false)
+
+    div(class="container-fluid")
+
+        div(class="row row-eq-height justify-content-around")
+            div(class="col")
+                div(class="card h-100")
+                    div(class="card-header subHeading") Sentiment analysis
+                    div(class="card-body")
+                        canvas(id="myPieChart" class=" w-100")
+                        small(class="sticky-bottom") Sample size: #{book.sampleSize}
+            div(class="col")
+                div(class="card h-100")
+                    div(class="card-header subHeading") Most recent tweets
+                    div(class="list-group")
+                        each tweet in book.latestTweets
+                            div(class="list-group-item flex-column align-items-start " + tweet.sentiment)
+                                di(class="d-flex w-100 justify-content-between ")
+                                    h5(class="mb-1">List group item heading) #{tweet.name}
+                                    small= fs.serverScriptModule.timeSinceDate(tweet.date, true)
+                                p(class="mb-1") #{tweet.text}
+                                small #{tweet.sentiment}
+            script.
+                var canvas = document.getElementById("myPieChart");
+                var ctx = canvas.getContext('2d');
+
+                // Global Options:
+                Chart.defaults.global.defaultFontColor = 'DarkCyan';
+                Chart.defaults.global.defaultFontSize = 16;
+
+                // Data with datasets options
+                var data = {
+                    datasets: [{
+                        data: ["#{book.positiveCount}", "#{book.negativeCount}", "#{book.mixedCount}", "#{book.neutralCount}"],
+                        backgroundColor: ["rgb(144, 238, 144)","rgb(240, 128, 128)","rgb(245, 222, 179)", "rgb(211, 211, 211)"]
+                    }],
+                    labels: ["Positive", "Negative", "Mixed", "Neutral"]
+                };
+                // Chart declaration with some options:
+                var myPieChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: data,
+                    options: {
+                        title: {
+                            fontSize: 20,
+                            display: true
+                        }
+                    }
+                });

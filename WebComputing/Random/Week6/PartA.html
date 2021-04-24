@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Week6 A</title>
+	  <script type="text/javascript" src="myscripts.js"></script>
+	  <link href="partccss.css" rel="stylesheet" type="text/css"/>
+   </head>
+  <body>
+  <form name="main" onsubmit="return !! (checkName() & checkPassword() &&checkEmail() & checkAddress())" onkeypress="change()">
+  surname:<br>
+  <input type="text" name ="surname"><span id="surnameMissing" class="error-message"> Surname is a required field</span><br>
+  Address:<br>
+  <input type="text" name="address"><br>
+  State:<br>
+  <select name ="state"><br>
+  <option value ="QLD">QLD</option>
+  <option value ="NSW">NSW</option>
+  <option value ="SA">SA</option>
+  </select>
+  <br>
+  Email address:<br>
+  <input type="text" name="email"><br>
+  Education:<br>
+  <Input type="radio" name ="education" value="none" checked="checkd"> none
+  <Input type="radio" name ="education" value="High school"> High school
+  <Input type="radio" name ="education" value="University">University<br>
+  <input type="checkbox" name="vegitarian" value ="true"> Vegitarian<br>
+   password:<br>
+  <input type="password" name="password"><br>
+     password Confirm:<br>
+  <input type="password" name="passwordC"><br>
+  <input type="submit" value="Submit">
+  </form>
+   </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>C-News - <%= name %></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="/javascripts/view.js"></script>
+    <script type="text/javascript" src="/javascripts/Chart.min.js"></script>
+    <link rel="icon" type="image/png" href="/images/c.png">
+</head>
+
+<body>
+    <%- include('header'); -%>
+    <div class="content">
+    <h2><%= name %></h2>
+    <table class="view-table">
+        <tr>
+            <th>Change</th>
+            <th>Articles Positive</th>
+            <th>Articles Negative</th>
+            <th>Articles Indifferent</th>
+        </tr>
+        <tr>
+            <td><%= coins.monthly_change %></td>
+            <td><%= articles.sentiment.positive.count %></td>
+            <td><%= articles.sentiment.negative.count %></td>
+            <td><%= articles.sentiment.indifferent.count %></td>
+        </tr>
+    </table>
+    <h3>
+        Influential Biggest Increase
+    </h3>
+    <table class="increase-table">
+        <tr>
+            <th class="small">Change</th>
+            <th class="large">Date</th>
+            <th class="large">Article before increase</th>
+            <th class="large">Article after increase</th>
+        </tr>
+        <tr>
+            <td><%= coins.daily_changes[coins.biggest_increase].change %></td>
+            <td><%= coins.daily_changes[coins.biggest_increase].time %></td>
+            <td>
+                <% if(extra_information.article_before_increase) { %>
+                <%= extra_information.article_before_increase.name %>
+                <% } %>
+            </td>
+            <td>
+                <% if(extra_information.article_after_increase) { %>
+                <%= extra_information.article_after_increase.name %>
+                <% } %>
+            </td>
+        </tr>
+    </table>
+    <h3>
+        Influential Biggest Decrease
+    </h3>
+    <table class="decrease-table">
+        <tr>
+            <th class="small">Change</th>
+            <th class="large">Date</th>
+            <th class="large">Article before decrease</th>
+            <th class="large">Article after decrease</th>
+        </tr>
+        <tr>
+            <td><%= coins.daily_changes[coins.biggest_decrease].change %></td>
+            <td><%= coins.daily_changes[coins.biggest_decrease].time %></td>
+            <td>
+                <% if(extra_information.article_before_decrease) { %>
+                <%= extra_information.article_before_decrease.name %>
+                <% } %>
+            </td>
+            <td>
+                <% if(extra_information.article_after_decrease) { %>
+                <%= extra_information.article_after_decrease.name %>
+                <% } %>
+            </td>
+        </tr>
+    </table>
+    <h3>
+        Chart
+    </h3>
+    <canvas id="coinChart" width="550" height="300"></canvas>
+    <script>
+        var daily_changes = <%- JSON.stringify(coins.daily_changes); %>
+        createChart(daily_changes);
+    </script>
+    <h2>Positive Articles</h2>
+    <% for(var i=0; i < articles.sentiment.positive.count; i++) { %>
+        <div class = "article" >
+            <strong>Title:</strong> <%= articles.articles[articles.sentiment.positive.articles[i]].name %> <br>
+            <strong>Published:</strong> <%= articles.articles[articles.sentiment.positive.articles[i]].published %><br>
+            <strong>Description:</strong> <%= articles.articles[articles.sentiment.positive.articles[i]].description %><br>
+            <a href=<%=articles.articles[articles.sentiment.positive.articles[i]].url%>>Link</a><br>
+        </div>
+    <% } %>
+    <h2>Negative Articles</h2>
+    <% for(var i=0; i < articles.sentiment.negative.count; i++) { %>
+        <div class="article">
+            <strong>Title:</strong> <%= articles.articles[articles.sentiment.negative.articles[i]].name %> <br>
+            <strong>Published:</strong> <%= articles.articles[articles.sentiment.negative.articles[i]].published %><br>
+            <strong>Description:</strong> <%= articles.articles[articles.sentiment.negative.articles[i]].description %><br>
+            <a href=<%=articles.articles[articles.sentiment.negative.articles[i]].url%>>Link</a><br>
+        </div>
+    <% } %>
+    <h2>Indifferent Articles</h2>
+    <% for(var i=0; i < articles.sentiment.indifferent.count; i++) { %>
+    <div class="article">
+        <strong>Title:</strong> <%= articles.articles[articles.sentiment.indifferent.articles[i]].name %> <br>
+        <strong>Published:</strong> <%= articles.articles[articles.sentiment.indifferent.articles[i]].published %><br>
+        <strong>Description:</strong> <%= articles.articles[articles.sentiment.indifferent.articles[i]].description %><br>
+        <a href=<%=articles.articles[articles.sentiment.indifferent.articles[i]].url%>>Link</a><br>
+    </div>
+    <% } %>
+    </div>
+    <%- include('viewFooter'); -%>
+</body>
+
+</html>

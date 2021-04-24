@@ -1,0 +1,32 @@
+%% Clear workspace and command window
+clc; clear all; close all;
+
+%%
+data=load('data/dataSetFull.mat');
+data = data.dataSetFull;
+
+%%
+[ training, testing ] = TrainingAndTesting( data, 0.8 );
+
+%%
+bag = CreateBagOfWords(500, 1750);
+
+Training_word_features=[];
+for i=1:length(training)
+    email = training(i,2);
+    email = CleanEmail(email);
+
+    word_indcies = ProcessEmail(email, bag);
+    features = EmailFeatures(word_indcies,bag);
+    Training_word_features=[Training_word_features,features];
+end
+
+Testing_word_features=[];
+for i=1:length(testing)
+    email = testing(i,2);
+    email = CleanEmail(email);
+
+    word_indcies = ProcessEmail(email, bag);
+    features = EmailFeatures(word_indcies,bag);
+    Testing_word_features=[Testing_word_features,features];
+end

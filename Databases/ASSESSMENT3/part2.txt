@@ -1,0 +1,11 @@
+use treasurehunters;
+
+SELECT concat(firstName, lastName) AS name, DOB, gender, email FROM Player WHERE suburb LIKE 'Sunnybank%';
+
+SELECT pl.username, COALESCE(sum(pu.cost),0) AS total from Purchase pu right JOIN player pl on pu.username = pl.username group by username order by total desc;
+
+SELECT username, phoneNumber FROM phonenumber WHERE username = (SELECT username FROM player ORDER BY dob ASC LIMIT 1);
+
+SELECT badge.badgeName, player.firstName, player.lastName, player.email FROM purchase RIGHT JOIN badge ON purchase.badgeID = badge.badgeID LEFT JOIN player ON purchase.username = player.username ORDER BY badgeName ASC, firstName ASC, lastName ASC;
+
+SELECT DISTINCT questName From quest INNER JOIN treasure ON treasure.questID = quest.questID INNER JOIN playerprogress ON playerprogress.questID = quest.questID WHERE playerprogress.progress='complete' AND treasure.type = 'common';

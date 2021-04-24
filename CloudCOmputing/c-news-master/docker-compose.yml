@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - "./:/src"
+    ports:
+      - "82:3000"
+    command: "npm start"

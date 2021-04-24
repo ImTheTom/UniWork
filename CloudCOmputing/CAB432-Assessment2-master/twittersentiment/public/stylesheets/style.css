@@ -1,0 +1,39 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: aliceblue ;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.tagHeading {
+  font-family: Courier;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--cyan);
+}
+
+.subHeading {
+  font-family: Courier;
+  font-weight: 600;
+  font-size: large;
+  color: var(--cyan);
+}
+
+.negative {
+  background-color: lightcoral;
+}
+
+.positive {
+  background-color: lightgreen;
+}
+
+.mixed {
+  background-color:wheat;
+}
+
+.neutral {
+  background-color: lightgray;
+}

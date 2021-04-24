@@ -1,0 +1,9 @@
+%%
+data=load('data/top10allemails.mat');
+data = data.data;
+%%
+data = RemoveTermsAfter(data, "X-FileName");
+%%
+data = RemoveTermsBefore(data, "Forwarded by");
+%%
+data = RemoveTermsBefore(data, "Original Message");

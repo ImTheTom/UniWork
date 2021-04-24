@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p The app that lets you see what other feel about certain hashtags
+  p Type in a hashtag to see for yourself. Do NOT include the octothorpe (#)
+
+  form
+    div(class="form-group")
+      input(type="string" class="form-control" id="searchtag" aria-describedby="searchlHelp" placeholder="Enter hashtag")
+      small(id="searchlHelp" class="form-text text-muted")
+
+  button(type="button" class="btn btn-primary" onclick="seachForHashtag('searchtag')") Submit

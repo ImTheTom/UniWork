@@ -1,0 +1,5 @@
+INSERT INTO badge(badgeName, badgeDescription) VALUES ('Fools Gold', 'Trickiest trickster in all the seas');
+
+DELETE FROM playerprogress where progress = 'inactive';
+
+UPDATE player SET streetNumber = '72', streetName = 'Evergreen Terrace', suburb = 'Springfield' WHERE lastName='Smith' AND streetNumber = '180' AND streetName = 'Zelda Street' AND suburb = 'Linkburb';

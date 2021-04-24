@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1 Something went wrong
+  h2 #{status}
+  pre #{stack}
+  button(type="button" class="btn btn-primary" onclick="goToSearch()") Back to search

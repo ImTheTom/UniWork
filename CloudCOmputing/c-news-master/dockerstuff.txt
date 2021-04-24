@@ -1,0 +1,11 @@
+docker build -t c-news .
+docker run -p 81:3000 c-news
+
+docker images
+
+docker tag <image> imthetom/c-news:latest
+docker push imthetom/c-news
+
+docker pull imthetom/c-news:latest
+
+sudo curl -fsSL https://get.docker.com/ | sh

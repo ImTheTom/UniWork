@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Sample JavaScript page</title>
+      <script type="text/javascript" src="myscripts2.js"></script>
+      <link href="partccss.css" rel="stylesheet" type="text/css"/>
+    </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>Here's a <a onclick="date()">link with an onclick</a>.</p>
+    <script>
+    document.write(Date());
+    </script>
+    <p id="mouseover" element onmouseover="createbox()" onmouseout="removebox()">Hover over me.</p>
+    <div id = "box" style="color:white; float:right;"
+      <p> This will only appear when it is hovered.</p>
+  </div>
+  <div id = "table">
+  <table>
+    <col width ="25px">
+    <col width ="25px">
+    <col width ="25px">
+    <tr>
+      <th>Rating</th>
+      <th>Number</th>
+      <th>Letter</th>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>3</td>
+      <td>a</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>d</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>4</td>
+      <td>h</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>j</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>1</td>
+      <td>y</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>2</td>
+      <td>t</td>
+    </tr>
+  </table>
+</div>
+<button onclick="get3(table)">Clickme</button>
+<p></p>
+<button onclick="getLocation()">Get location!</button>
+<p id="status">Click the button to get your coordinates.</p>
+<div id="mapholder"></div>
+<p id="demo"></p>
+<button onclick="same()">Click to see if the following are in the same suburb</button>
+<p>7TH BRIGADE PARK in the suburb of CHERMSIDE. BENEKE STREET PARK in the suburb of CHERMSIDE. DOCK STREET PARK in the suburb of SOUTH BRISBANE.</p>
+<p id="parksss"></p>
+  </body>
+</html>

@@ -1,0 +1,561 @@
+/*--CSS for the front page of the website--*/
+
+/*Desktop view of the webpage*/
+@media screen and (min-width: 885px) {
+
+  html{
+    background: url(../Images/background.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size:cover;
+      -o-background-size: cover;
+    background-size: cover;
+  }/*Sets the background image and maskes it span the page */
+
+  body{
+    overflow-x:hidden;
+  } /*Any overflow in the x direction is hidden*/
+
+  #longitude{
+    display:none;
+  }
+
+  #latitude{
+    display: none;
+  }
+
+  #main{
+    min-height: 250px;
+    left: 20%;
+    right: 20%;
+    top:30%;
+    width: 60%;
+    height: 30%;
+    background-color: white;
+    position: absolute;
+    border-radius: 25px;
+    border-color: DarkSlateGray;
+    border-width: 5px;
+    border-style: solid;
+  } /*This covers the background making the forms and labels easier to read. It is a curved white box with a border of 5px. It also has a min height so if
+   the page is smaller than it, a scroll bar appears and no details are lost. */
+
+  #header{
+    background-color: DarkSlateGray;
+    top:0;
+    height: 30px;
+    left: 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+    padding-left: 10%;
+    font-size: 25px;
+    font-weight: bold;
+  } /*Rectangle that spans the top of the page.*/
+
+  #footer {
+    background-color: DarkSlateGray;
+    bottom: 0;
+    text-align: center;
+    height: 20px;
+    left: 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+  } /*Rectangle that spans the bottom of the page.*/
+
+  #header a{
+    font-size: 15px;
+    color: Gainsboro;
+  } /*Sets the links in the header to a dull white*/
+
+  #header a:link{
+    text-decoration: none;
+  } /*Sets the links to have no text decorations(e.g. gets rid of the underline)*/
+
+  #header a:hover{
+    color:white;
+  } /*If a link is hovered over it changes it's colour to a white*/
+
+  #nameStyle{
+    position: absolute;
+    top:20%;
+    left: 16.66%;
+    width: 100%;
+ }/*The name form position*/
+
+  #suburbStyle{
+    position: absolute;
+    top:20%;
+    left: 54.162%;
+    width: 100%;
+  }/*The Suburb form position*/
+
+  #name {
+    width: 30%;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+  } /*Name form. Sets the width to 30% of the screen, and has dull border if not selected.*/
+
+  #suburb {
+    width: 30%;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+  } /*Subrub form. Sets the width to 30% of the screen, and has dull border if not selected.*/
+
+  #name:focus{
+    border: 3px solid #555;
+  } /*If the name form is in focus it has a dark border*/
+
+  #suburb:focus{
+    border: 3px solid #555;
+  } /*If the suburb form is in focus it has a dark border*/
+
+  #rating{
+    padding: 16px 32px;
+    background-color: #f1f1f1;
+    border: 3px solid #ccc;
+    position: absolute;
+    margin: 4px 2px;
+  } /*Rating form. Sets the border to a dull colour*/
+
+  #rating:focus {
+    border: 3px solid #555;
+  } /*If the rating form is hovered it sets the border to a dark colour*/
+
+  #ratingStyle{
+    position: absolute;
+    top:55%;
+    left: 16.668%;
+    width: 100%;
+  } /*Rating form position*/
+
+  #submit{
+    background-color: White;
+    color: DarkSlateGray;
+    border: none;
+    border: 3px solid #ccc;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    top:55%;
+    left: 70%;
+    position: absolute;
+  } /*Submit button style, sets the background to white, the border to a dull colour
+  and the cursor to a pointer if hovered.Gets rid of the text decoration as well*/
+
+  #submit:hover{
+    background-color: DarkSlateGray;
+    border: 3px solid DarkSlateGray;
+    color: White;
+  } /*Changes the submit button style if hovered. In this case the background to a colour
+  and the border to the same colour. Changes the text so it can be read.*/
+
+  #location{
+    background-color: White;
+    color: DarkSlateGray;
+    border: none;
+    border: 3px solid #ccc;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    top:55%;
+    left: 45%;
+    position: absolute;
+  } /*Submit button style, sets the background to white, the border to a dull colour
+  and the cursor to a pointer if hovered.Gets rid of the text decoration as well*/
+
+  #location:hover{
+    background-color: DarkSlateGray;
+    border: 3px solid DarkSlateGray;
+    color: White;
+  } /*Changes the submit button style if hovered. In this case the background to a colour
+  and the border to the same colour. Changes the text so it can be read.*/
+
+  label{
+    position: absolute;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+  }/*Sets the label text to the font*/
+
+  .top{
+    bottom: 100%;
+    left: 0;
+  }/*Sets the labels to above the forms*/
+}
+
+
+/*Tablet view of the web page*/
+@media screen and (max-width: 900px) {
+
+  html{
+    background: url(../Images/background.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size:cover;
+      -o-background-size: cover;
+    background-size: cover;
+  } /*Sets the background image and maskes it span the page */
+
+  body{
+    overflow-x:hidden;
+  } /*Any overflow in the x direction is hidden*/
+
+  #longitude{
+    display:none;
+  }
+
+  #latitude{
+    display: none;
+  }
+
+  #main{
+    min-height: 250px;
+    left: 5%;
+    right: 5%;
+    top:30%;
+    width: 90%;
+    height: 40%;
+    background-color: white;
+    position: absolute;
+    border-radius: 25px;
+    border-color: DarkSlateGray;
+    border-width: 5px;
+    border-style: solid;
+  } /*This covers the background making the forms and labels easier to read. It is a curved white box with a border of 5px. It also has a min height so if
+   the page is smaller than it, a scroll bar appears and no details are lost. */
+
+  #header{
+    background-color: DarkSlateGray;
+    top:0;
+    height: 30px;
+    left: 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+    padding-left: 10%;
+    font-size: 25px;
+    font-weight: bold;
+  } /*Rectangle that spans the top of the page.*/
+
+  #header a{
+    font-size: 15px;
+    text-align: center;
+    border-width: 1px;
+    color: Gainsboro;
+  } /*Sets the links in the header to a dull white*/
+
+  #header a:link{
+    text-decoration: none;
+  } /*Sets the links to have no text decorations(e.g. gets rid of the underline)*/
+
+  #header a:hover{
+    color:white;
+  } /*If a link is hovered over it changes it's colour to a white*/
+
+  #footer {
+    background-color: DarkSlateGray;
+    bottom: 0;
+    text-align: center;
+    height: 40px;
+    left: 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+  } /*Rectangle that spans the bottom of the page.*/
+
+  #nameStyle{
+    position: absolute;
+    top:20%;
+    left: 16.66%;
+    width: 100%;
+  } /*The name form position*/
+
+  #suburbStyle{
+    position: absolute;
+    top:20%;
+    left: 54.162%;
+    width: 100%;
+  } /*The Suburb form position*/
+
+  #name {
+    width: 30%;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+  } /*Name form. Sets the width to 30% of the screen, and has dull border if not selected.*/
+
+  #suburb {
+    width: 30%;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+  } /*Subrub form. Sets the width to 30% of the screen, and has dull border if not selected.*/
+
+  #name:focus{
+    border: 3px solid #555;
+  } /*If the name form is in focus it has a dark border*/
+
+  #suburb:focus{
+    border: 3px solid #555;
+  } /*If the suburb form is in focus it has a dark border*/
+
+  #rating{
+    padding: 16px 32px;
+    background-color: #f1f1f1;
+    border: 3px solid #ccc;
+    position: absolute;
+    margin: 4px 2px;
+  } /*Rating form. Sets the border to a dull colour*/
+
+  #rating:focus {
+      border: 3px solid #555;
+  } /*If the rating form is hovered it sets the border to a dark colour*/
+
+  #ratingStyle{
+    position: absolute;
+    top:55%;
+    left: 16.668%;
+    width: 100%;
+  } /*Rating form position*/
+
+  #submit{
+    background-color: White;
+    color: DarkSlateGray;
+    border: none;
+    border: 3px solid #ccc;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    top:55%;
+    left: 54%;
+    position: absolute;
+  }/*Submit button style, sets the background to white, the border to a dull colour
+  and the cursor to a pointer if hovered.Gets rid of the text decoration as well*/
+
+  #submit:hover{
+    background-color: DarkSlateGray;
+    border: 3px solid DarkSlateGray;
+    color: White;
+  } /*Changes the submit button style if hovered. In this case the background to a colour
+  and the border to the same colour. Changes the text so it can be read.*/
+
+  label{
+    position: absolute;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+  } /*Sets the label text to the font*/
+
+  .top{
+    bottom: 100%;
+    left: 0;
+  } /*Sets the labels to above the forms*/
+
+  #location{
+    background-color: White;
+    color: DarkSlateGray;
+    border: none;
+    border: 3px solid #ccc;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    top:75%;
+    left: 15%;
+    position: absolute;
+  } /*Submit button style, sets the background to white, the border to a dull colour
+  and the cursor to a pointer if hovered.Gets rid of the text decoration as well*/
+
+  #location:hover{
+    background-color: DarkSlateGray;
+    border: 3px solid DarkSlateGray;
+    color: White;
+  } /*Changes the submit button style if hovered. In this case the background to a colour
+  and the border to the same colour. Changes the text so it can be read.*/
+}
+
+
+/*Mobile view of the web page*/
+@media screen and (max-width: 470px) {
+
+  html{
+    background: url(../Images/background.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size:cover;
+      -o-background-size: cover;
+    background-size: cover;
+  } /*Sets the background image and maskes it span the page */
+
+  body{
+    overflow-x:hidden;
+  }/*Any overflow in the x direction is hidden*/
+
+  #main{
+    min-height: 250px;
+    border-radius: 0%;
+    border-top: 5px;
+    border-bottom: 5px;
+    border-style: solid;
+    border-color: DarkSlateGray;
+    border-left: none;
+    border-right: none;
+    top:30%;
+    width: 100%;
+    left: 0%;
+    height: 40%;
+    background-color: white;
+    position: absolute;
+  } /*This covers the background making the forms and labels easier to read. It is a curved white box with a border of 5px. It also has a min height so if
+   the page is smaller than it, a scroll bar appears and no details are lost. */
+
+  #header{
+    background-color: DarkSlateGray;
+    top:0;
+    height: 30px;
+    left: 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+    padding-left: 10%;
+    font-size: 25px;
+    font-weight: bold;
+  } /*Rectangle that spans the top of the page.*/
+
+  #header a{
+    font-size: 15px;
+    text-align: center;
+    border-width: 1px;
+    color: Gainsboro;
+  }/*Sets the links in the header to a dull white*/
+
+  #header a:link{
+    text-decoration: none;
+  } /*Sets the links to have no text decorations(e.g. gets rid of the underline)*/
+
+  #header a:hover{
+    color:white;
+  } /*If a link is hovered over it changes it's colour to a white*/
+
+  #footer {
+    background-color: DarkSlateGray;
+    bottom: 0;
+    text-align: center;
+    height: 50px;
+    left: 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+  } /*Rectangle that spans the bottom of the page.*/
+
+  #nameStyle{
+    position: absolute;
+    top:20%;
+     left: 16.66%;
+     width: 100%;
+  }/*The name form position*/
+
+  #suburbStyle{
+    position: absolute;
+    top:20%;
+    left: 54.162%;
+    width: 100%;
+  }/*The Suburb form position*/
+
+  #name {
+      width: 30%;
+      padding: 16px 20px;
+      box-sizing: border-box;
+      border: 3px solid #ccc;
+      outline: none;
+  } /*Name form. Sets the width to 30% of the screen, and has dull border if not selected.*/
+
+  #suburb {
+      width: 30%;
+      padding: 16px 20px;
+      box-sizing: border-box;
+      border: 3px solid #ccc;
+      outline: none;
+  } /*Subrub form. Sets the width to 30% of the screen, and has dull border if not selected.*/
+
+  #name:focus{
+    border: 3px solid #555;
+  } /*If the name form is in focus it has a dark border*/
+
+  #suburb:focus{
+    border: 3px solid #555;
+  } /*If the suburb form is in focus it has a dark border*/
+
+  #rating{
+    padding: 16px 32px;
+    background-color: #f1f1f1;
+    border: 3px solid #ccc;
+    position: absolute;
+    margin: 4px 2px;
+  } /*Rating form. Sets the border to a dull colour*/
+
+  #rating:focus {
+    border: 3px solid #555;
+  } /*If the rating form is hovered it sets the border to a dark colour*/
+
+  #ratingStyle{
+    position: absolute;
+    top:55%;
+    left: 16.668%;
+    width: 100%;
+  } /*Rating form position*/
+
+  #submit{
+    background-color: White;
+    color: DarkSlateGray;
+    border: none;
+    border: 3px solid #ccc;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    top:55%;
+    left: 54%;
+    position: absolute;
+  } /*Submit button style, sets the background to white, the border to a dull colour
+  and the cursor to a pointer if hovered.Gets rid of the text decoration as well*/
+
+  #submit:hover{
+    background-color: DarkSlateGray;
+    border: 3px solid DarkSlateGray;
+    color: White;
+  } /*Changes the submit button style if hovered. In this case the background to a colour
+  and the border to the same colour. Changes the text so it can be read.*/
+
+  #longitude{
+    display:none;
+  }
+
+  #latitude{
+    display: none;
+  }
+
+  label{
+    position: absolute;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+  }/*Sets the label text to the font*/
+
+  .top{
+    bottom: 100%;
+    left: 0;
+  }/*Sets the labels to above the forms*/
+}

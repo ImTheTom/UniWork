@@ -1,0 +1,128 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #F4DECB;
+  color: #49274A;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 45px
+}
+
+.header {
+  overflow: hidden;
+  background-color: #94618E;
+}
+
+.footer {
+  background-color: #94618E;
+  overflow: hidden;
+  color: #F4DECB;
+  padding: 12px;
+  text-align: center;
+}
+
+.search {
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  display: inline flow-root list-item;
+}
+
+.header a {
+  float: left;
+  color: #F4DECB;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header-right {
+  float: right;
+}
+
+.content {
+  text-align: center;
+  padding: 20px;
+  left: 20%;
+  width: 60%;
+  background-color: #f8EEE7;
+  position: relative;
+}
+
+.button-link {
+  color: #f8EEE7;
+  background-color: #49274A;
+  padding: 15px 32px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 60%;
+}
+
+.view-table {
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.decrease-table {
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 100%;
+}
+
+.increase-table {
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 15px;
+  height: 15px;
+}
+
+#coinChart {
+  padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.small {
+  width: 10%;
+}
+
+.large {
+  width: 30%;
+}
+
+.article {
+  padding: 10px;
+  text-align: left;
+  width: 75%;
+  left: 12.5%;
+  position: relative;
+}

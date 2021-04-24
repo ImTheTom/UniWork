@@ -1,0 +1,1077 @@
+/*--CSS for the park page of the website--*/
+
+/* Desktop view of the web page */
+@media screen and (min-width: 1150px) {
+
+  html{
+    background: url(../Images/background.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size:cover;
+      -o-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+  }/*Sets the background image and maskes it span the page */
+
+  #header{
+    background-color: DarkSlateGray;
+    top:0;
+    height: 30px;
+    left: 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+    padding-left: 10%;
+    font-size: 25px;
+    font-weight: bold;
+  }/*Rectangle that spans the top of the page.*/
+
+  table{
+    position: absolute;
+    border-collapse: collapse;
+    left:25%;
+    top:70%;
+    width: 50%;
+    border: 1px solid #808080;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+  }/*Table position*/
+
+  th{
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-weight: bold;
+    padding: 2%;
+    text-align: left;
+    border: 1px solid #808080;
+  }/*Heading of the tables style*/
+
+  td{
+    text-align: left;
+    padding: 2%;
+    border: 1px solid #808080;
+  }/*the cells of the table style*/
+
+  a{
+    color: white;
+    text-decoration:  none;
+  }/*links inside the cells style*/
+
+  a:hover{
+    text-decoration: underline;
+  }/*links inside the cells underline when hovered*/
+
+  tr:nth-child(even) {
+    background-color: #808080;
+    border: 1px solid white;
+    color: white;
+  }/*even cells change the background colour and the colour of the text*/
+
+  tr:nth-child(odd) a {
+    color: black;
+  }/*odd cells change the text colour to black*/
+
+  #header a{
+    font-size: 15px;
+    text-align: center;
+    border-width: 1px;
+    color: Gainsboro;
+  }/*Sets the links in the header to a dull white*/
+
+  #header a:link{
+    text-decoration: none;
+  }/*Sets the links to have no text decorations(e.g. gets rid of the underline)*/
+
+  #header a:hover{
+    color:white;
+  }/*If a link is hovered over it changes it's colour to a white*/
+
+  #footer {
+    background-color: DarkSlateGray;
+    bottom: 0;
+    float: left;
+    text-align: center;
+    height: 20px;
+    left: 0;
+    color: white;
+    margin-top: auto;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }/*Rectangle that spans the bottom of the page.*/
+
+  #main{
+    min-height: 750px;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    height: 98%;
+    background-color: white;
+    position: absolute;
+    overflow: hidden;
+    border-left: solid;
+    border-right: solid;
+    border-left-color: DarkSlateGray;
+    border-right-color: DarkSlateGray;
+    border-right-width: 5px;
+    border-left-width: 5px;
+  }/*This covers the background making the forms and labels easier to read. It is a verticle white box with borders on the side.
+    With a min height of 750px*/
+
+  #main h1{
+    font-size: 50px;
+    left:2.5%;
+    position: absolute;
+    top:3%;
+    font-weight: bold;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    color:  DarkSlateGray;
+  }/*H1 style in the main */
+
+  #main h2{
+    font-size: 25px;
+    left:2.5%;
+    position: absolute;
+    top:20%;
+    font-weight: bold;
+    color:  DarkSlateGray;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+  }/*H2 style in the main */
+
+  #breadcrumb{
+    position: absolute;
+    top:3%;
+    left: 1%;
+    color: DarkSlateGray;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 12px;
+  }/*breadcrumb style*/
+
+  #breadcrumb a{
+    color: DarkSlateGray;
+  }/*breadcrumb a style*/
+
+  #breadcrumb a:link{
+    text-decoration: none;
+  }/*breadcrumb link style*/
+
+  #breadcrumb a:hover{
+    text-decoration: underline;
+  }/*breadcrumb link hover style*/
+
+  #Score{
+    position: absolute;
+    top:55%;
+    left: 40%;
+    width: 100%;
+  }/*score position*/
+
+  #WriteReview{
+    position: absolute;
+    top:55%;
+    left:2.5%;
+    width: 100%;
+    height:100%;
+  }/*WriteReview position*/
+
+  #ratingStyle{
+    position: absolute;
+    top:62.5%;
+    left: 60%;
+    width: 100%;
+  } /*rating position*/
+
+  #searchStye{
+    position: absolute;
+    top:55%;
+    left: 75%;
+    width: 100%;
+  } /*Search position*/
+
+  #nameStyle{
+    position: absolute;
+    top:55%;
+    left: 60%;
+    width: 100%;
+  }/*name position*/
+
+  #search{
+    background-color: White;
+    color: DarkSlateGray;
+    border: none;
+    border: 3px solid #ccc;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    cursor: pointer;
+    position: absolute;
+    top:62%;
+    left: 75%;
+  } /*search style*/
+
+  #search:hover{
+    background-color: DarkSlateGray;
+    border: 3px solid DarkSlateGray;
+    color: White;
+  } /*Changes the searc button style if hovered. In this case the background to a colour
+  and the border to the same colour. Changes the text so it can be read.*/
+
+  #submit{
+    width: 10%;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top:62.5%;
+    left: 40%;
+  }/*Submit button style, sets the background to white, the border to a dull colour
+  and the cursor to a pointer if hovered.Gets rid of the text decoration as well*/
+
+  #name {
+    width: 15%;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+  }/*Name form. Sets the width to 15% of the screen, and has dull border if not selected.*/
+
+  #name:focus{
+    border: 3px solid #555;
+  }/*If the name form is in focus it has a dark border*/
+
+  #suburb{
+    width: 15%;
+    padding: 7px 7px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+  } /*Subrub form. Sets the width to 30% of the screen, and has dull border if not selected.*/
+
+
+  #suburb:focus{
+    border: 3px solid #555;
+  }/*If the suburb form is in focus it has a dark border*/
+
+  #score{
+    width: 10%;
+    padding: 8px 10px;
+    background-color: #f1f1f1;
+    border: 3px solid #ccc;
+    position: absolute;
+  } /*score form. Sets the border to a dull colour*/
+
+  #score:focus {
+    border: 3px solid #555;
+  } /*If the score form is hovered it sets the border to a dark colour*/
+
+  #rating{
+    width: 10%;
+    padding: 8px 10px;
+    background-color: #f1f1f1;
+    border: 3px solid #ccc;
+    position: absolute;
+  } /*Rating form. Sets the border to a dull colour*/
+
+  #rating:focus {
+    border: 3px solid #555;
+  }/*If the rating form is hovered it sets the border to a dark colour*/
+
+  label{
+    position: absolute;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 20px;
+  }/*label stlye*/
+
+  .top{
+    bottom: 100%;
+    left: 0;
+  }/*labels appear on the top of forms*/
+
+  .topReview{
+    bottom: 100%;
+    left: 0;
+    font-size: 18px;
+  }/*labels style appear on the top of review forms*/
+
+  .first{
+    float:none;
+    padding: 0.5%;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 16px;
+    border-radius: 6px;
+    border-color: DarkSlateGray;
+    border-style: solid;
+    color:black;
+    position: absolute;
+    left:2.5%;
+    top:75%;
+    height: 15%;
+    width: 42.5%;
+    word-wrap: break-word;
+  }/*style and position of the first review*/
+
+  .second{
+    padding: 0.5%;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 16px;
+    border-radius: 6px;
+    border-color: DarkSlateGray;
+    border-style: solid;
+    color:black;
+    position: absolute;
+    left:52.5%;
+    top:75%;
+    height: 15%;
+    width: 42.5%;
+    word-wrap: break-word;
+  }/*style and position of the second review*/
+
+  .reviewWrite{
+    width: 35%;
+    height:10%;
+    position: absolute;
+  } /*0position of the write review*/
+
+  div.Map{
+    position:absolute;
+    top:15%;
+    left:60%;
+    width:30%;
+    border:5px solid DarkSlateGray;
+    height:30%;
+  }/*the image of the map style and position*/
+
+  div.Starsss{
+    position:absolute;
+    top:15%;
+    left:2.5%;
+    width:23%;
+    height:5%;
+  }/*the image of the stars style and position*/
+}
+
+/*Tablet view of the web page*/
+@media screen and (max-width: 1150px){
+
+  html{
+    background: url(../Images/background.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size:cover;
+      -o-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+  }/*Sets the background image and maskes it span the page */
+
+  table{
+    position: absolute;
+    border-collapse: collapse;
+    left:25%;
+    top:70%;
+    width: 50%;
+    border: 1px solid #808080;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+  }/*Table position*/
+
+  th{
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-weight: bold;
+    padding: 2%;
+    text-align: left;
+    border: 1px solid #808080;
+  }/*Heading of the tables style*/
+
+  td{
+    text-align: left;
+    padding: 2%;
+    border: 1px solid #808080;
+  }/*the cells of the table style*/
+
+  a{
+    color: white;
+    text-decoration:  none;
+  }/*links inside the cells style*/
+
+  a:hover{
+    text-decoration: underline;
+  }/*links inside the cells underline when hovered*/
+
+  tr:nth-child(even) {
+    background-color: #808080;
+    border: 1px solid white;
+    color: white;
+  }/*even cells change the background colour and the colour of the text*/
+
+  tr:nth-child(odd) a {
+    color: black;
+  }/*odd cells change the text colour to black*/
+
+  #header{
+    background-color: DarkSlateGray;
+    top:0;
+    height: 30px;
+    left: 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+    padding-left: 10%;
+    font-size: 25px;
+    font-weight: bold;
+  }/*Rectangle that spans the top of the page.*/
+
+  #header a{
+    font-size: 15px;
+    text-align: center;
+    border-width: 1px;
+    color: Gainsboro;
+  }/*Sets the links in the header to a dull white*/
+
+  #header a:link{
+    text-decoration: none;
+  }/*Sets the links to have no text decorations(e.g. gets rid of the underline)*/
+
+  #header a:hover{
+    color:white;
+  }/*If a link is hovered over it changes it's colour to a white*/
+
+  #footer {
+    background-color: DarkSlateGray;
+    bottom: 0;
+    float: left;
+    text-align: center;
+    height: 40px;
+    left: 0;
+    color: white;
+    margin-top: auto;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }/*Rectangle that spans the bottom of the page.*/
+
+  #main{
+    min-height: 750px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 98%;
+    background-color: white;
+    position: absolute;
+    overflow: hidden;
+    border-left: solid;
+    border-right: solid;
+    border-left-color: DarkSlateGray;
+    border-right-color: DarkSlateGray;
+    border-right-width: 5px;
+    border-left-width: 5px;
+  }/*This covers the background making the forms and labels easier to read. It is a verticle white box with borders on the side.
+    With a min height of 750px*/
+
+  #main h1{
+    font-size: 50px;
+    left:2.5%;
+    position: absolute;
+    top:3%;
+    font-weight: bold;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    color:  DarkSlateGray;
+  }/*H1 style in the main */
+
+  #main h2{
+    font-size: 25px;
+    left:2.5%;
+    position: absolute;
+    top:20%;
+    font-weight: bold;
+    color:  DarkSlateGray;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+  }/*H2 style in the main */
+
+  #breadcrumb{
+    position: absolute;
+    top:3%;
+    left: 1%;
+    color: DarkSlateGray;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 12px;
+  }/*breadcrumb style*/
+
+  #breadcrumb a{
+    color: DarkSlateGray;
+  }/*breadcrumb a style*/
+
+  #breadcrumb a:link{
+    text-decoration: none;
+  }/*breadcrumb link style*/
+
+  #breadcrumb a:hover{
+    text-decoration: underline;
+  }/*breadcrumb link hover style*/
+
+  #Score{
+    position: absolute;
+    top:55%;
+    left: 40%;
+    width: 100%;
+  }/*score position*/
+
+  #WriteReview{
+    position: absolute;
+    top:55%;
+    left:2.5%;
+    width: 100%;
+    height:100%;
+  }/*WriteReview position*/
+
+  #ratingStyle{
+    position: absolute;
+    top:62.5%;
+    left: 60%;
+    width: 100%;
+  }/*rating position*/
+
+  #searchStye{
+    position: absolute;
+    top:55%;
+    left: 75%;
+    width: 100%;
+  }/*Search position*/
+
+  #nameStyle{
+    position: absolute;
+    top:55%;
+    left: 60%;
+    width: 100%;
+  }/*name position*/
+
+  #search{
+    background-color: White;
+    color: DarkSlateGray;
+    border: none;
+    border: 3px solid #ccc;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    top:62%; left: 75%;
+  }/*search style*/
+
+  #search:hover{
+    background-color: DarkSlateGray;
+    border: 3px solid DarkSlateGray;
+    color: White;
+  }/*Changes the search button style if hovered. In this case the background to a colour
+  and the border to the same colour. Changes the text so it can be read.*/
+
+  #submit{
+    background-color: White;
+    color: DarkSlateGray;
+    border: none;
+    border: 3px solid #ccc;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    top:60%;
+    left: 40%;
+  }/*Submit button style, sets the background to white, the border to a dull colour
+  and the cursor to a pointer if hovered.Gets rid of the text decoration as well*/
+
+  #submit:hover{
+    background-color: DarkSlateGray;
+    border: 3px solid DarkSlateGray;
+    color: White;
+  } /*Changes the searc button style if hovered. In this case the background to a colour
+  and the border to the same colour. Changes the text so it can be read.*/
+
+  #name {
+    width: 15%;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+  }/*Name form. Sets the width to 15% of the screen, and has dull border if not selected.*/
+
+  #name:focus{
+    border: 3px solid #555;
+  }/*If the name form is in focus it has a dark border*/
+
+  #suburb{
+    width: 15%;
+    padding: 7px 5px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+  }/*Subrub form. Sets the width to 30% of the screen, and has dull border if not selected.*/
+
+  #suburb:focus{
+    border: 3px solid #555;
+  }/*If the suburb form is in focus it has a dark border*/
+
+  #score{
+    width: 10%;
+    padding: 4px 5px;
+    background-color: #f1f1f1;
+    border: 3px solid #ccc;
+    position: absolute;
+  }/*score form. Sets the border to a dull colour*/
+
+  #score:focus {
+    border: 3px solid #555;
+  }/*If the score form is hovered it sets the border to a dark colour*/
+
+  #rating{
+    width: 10%;
+    padding: 4px 5px;
+    background-color: #f1f1f1;
+    border: 3px solid #ccc;
+    position: absolute;
+  }/*Rating form. Sets the border to a dull colour*/
+
+  #rating:focus {
+    border: 3px solid #555;
+  }/*If the rating form is hovered it sets the border to a dark colour*/
+
+  label{
+    position: absolute;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 14px;
+  }/*label stlye*/
+
+  .top{
+    bottom: 100%;
+    left: 0;
+  }/*labels appear on the top of forms*/
+
+  .topReview{
+    bottom: 100%;
+    left: 0;
+    font-size: 14px;
+  }/*labels style appear on the top of review forms*/
+
+  .first{
+    float:none;
+    padding: 0.5%;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 12px;
+    border-radius: 6px;
+    border-color: DarkSlateGray;
+    border-style: solid;
+    color:black;
+    position: absolute;
+    left:2.5%;
+    top:75%;
+    height: 15%;
+    width: 42.5%;
+    word-wrap: break-word;
+  }/*style and position of the first review*/
+
+  .second{
+    padding: 0.5%;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 12px;
+    border-radius: 6px;
+    border-color: DarkSlateGray;
+    border-style: solid;
+    color:black;
+    position: absolute;
+    left:52.5%;
+    top:75%;
+    height: 15%;
+    width: 42.5%;
+    word-wrap: break-word;
+  }/*style and position of the second review*/
+
+  .reviewWrite{
+    width: 35%;
+    height:10%;
+    position: absolute;
+  }/*0position of the write review*/
+
+  div.Map{
+    position:absolute;
+    top:15%;
+    left:60%;
+    width:30%;
+    border:5px solid DarkSlateGray;
+    height:30%;
+  }/*the image of the map style and position*/
+
+  div.Starsss{
+    position:absolute;
+    top:15%;
+    left:2.5%;
+    width:23%;
+    height:5%;
+  }/*the image of the stars style and position*/
+}
+
+/*mobile layout of the page*/
+@media screen and (max-width:590px){
+
+  html{
+    background: url(../Images/background.png) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size:cover;
+      -o-background-size: cover;
+    background-size: cover;
+    z-index: 1;
+  }/*Sets the background image and maskes it span the page */
+
+  table{
+    position: absolute;
+    border-collapse: collapse;
+    left:25%;
+    top:70%;
+    width: 50%;
+    border: 1px solid #808080;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+  }/*Table position*/
+
+  th{
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-weight: bold;
+    padding: 2%;
+    text-align: left;
+    border: 1px solid #808080;
+  }/*Heading of the tables style*/
+
+  td{
+    text-align: left;
+    padding: 2%;
+    border: 1px solid #808080;
+  }/*the cells of the table style*/
+
+  a{
+    color: white;
+    text-decoration:  none;
+  }/*links inside the cells style*/
+
+  a:hover{
+    text-decoration: underline;
+  }/*links inside the cells underline when hovered*/
+
+  tr:nth-child(even) {
+    background-color: #808080;
+    border: 1px solid white;
+    color: white;
+  }/*even cells change the background colour and the colour of the text*/
+
+  tr:nth-child(odd) a {
+    color: black;
+  }/*odd cells change the text colour to black*/
+
+  #header{
+    background-color: DarkSlateGray;
+    top:0;
+    height: 30px;
+    left: 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+    padding-left: 10%;
+    font-size: 25px;
+    font-weight: bold;
+  }/*Rectangle that spans the top of the page.*/
+
+  #header a{
+    font-size: 15px;
+    text-align: center;
+    border-width: 1px;
+    color: Gainsboro;
+  }/*Sets the links in the header to a dull white*/
+
+  #header a:link{
+    text-decoration: none;
+  }/*Sets the links to have no text decorations(e.g. gets rid of the underline)*/
+
+  #header a:hover{
+    color:white;
+  }/*If a link is hovered over it changes it's colour to a white*/
+
+  #footer {
+    background-color: DarkSlateGray;
+    bottom: 0;
+    float: left;
+    text-align: center;
+    height: 50px;
+    left: 0;
+    color: white;
+    margin-top: auto;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }/*Rectangle that spans the bottom of the page.*/
+
+  #main{
+    min-height: 750px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 1700px;
+    background-color: white;
+    position: absolute;
+    overflow: hidden;
+    border-left: solid;
+    border-right: solid;
+    border-left-color: DarkSlateGray;
+    border-right-color: DarkSlateGray;
+    border-right-width: 5px;
+    border-left-width: 5px;
+  }/*This covers the background making the forms and labels easier to read. It is a verticle white box with borders on the side.
+    With a min height of 750px*/
+
+  #main h1{
+    font-size: 50px;
+    left:2.5%;
+    position: absolute;
+    top:75px;
+    font-weight: bold;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    color:  DarkSlateGray;
+  }/*H1 style in the main */
+
+  #main h2{
+    font-size: 25px;
+    left:2.5%;
+    position: absolute;
+    top:255px;
+    font-weight: bold;
+    color:  DarkSlateGray;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+  }/*H2 style in the main */
+
+  #breadcrumb{
+    position: absolute;
+    top:3%;
+    left: 1%;
+    color: DarkSlateGray;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 12px;
+  }/*breadcrumb style*/
+
+  #breadcrumb a:{
+    color: DarkSlateGray;
+  }/*breadcrumb a style*/
+
+  #breadcrumb a:link{
+    text-decoration: none;
+  }/*breadcrumb link style*/
+
+  #breadcrumb a:hover{
+    text-decoration: underline;
+  }/*breadcrumb link hover style*/
+
+  #Score{
+    position: absolute;
+    top:1125px;
+    left: 7.5%;
+    width: 100%;
+  }/*score position*/
+
+  #WriteReview{
+    position: absolute;
+    top:950px;
+    left:2.5%;
+    width: 100%;
+    height:100%;
+  }/*WriteReview position*/
+
+  #ratingStyle{
+    position: absolute;
+    top:1550px;
+    left: 7.5%;
+    width: 100%;
+  }/*rating position*/
+
+  #searchStye{
+    position: absolute;
+    top:1475px;
+    left: 57.5%;
+    width: 100%;
+  }/*Search position*/
+
+  #nameStyle{
+    position: absolute;
+    top:1475px;
+    left: 7.5%;
+    width: 100%;
+  }/*name position*/
+
+  #search{
+    background-color: White;
+    color: DarkSlateGray;
+    border: none;
+    border: 3px solid #ccc;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    top:1545px;
+    left: 57.5%;
+  }/*search style*/
+
+  #search:hover{
+    background-color: DarkSlateGray;
+    border: 3px solid DarkSlateGray;
+    color: White;
+  } /*Changes the searc button style if hovered. In this case the background to a colour
+  and the border to the same colour. Changes the text so it can be read.*/
+
+  #submit{
+    background-color: White;
+    color: DarkSlateGray;
+    border: none;
+    border: 3px solid #ccc;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    top:1120px;
+    left: 100px;
+  }/*Submit button style, sets the background to white, the border to a dull colour
+  and the cursor to a pointer if hovered.Gets rid of the text decoration as well*/
+
+  #submit:hover{
+    background-color: DarkSlateGray;
+    border: 3px solid DarkSlateGray;
+    color: White;
+  } /*Changes the submit button style if hovered. In this case the background to a colour
+  and the border to the same colour. Changes the text so it can be read.*/
+
+  #name {
+    width: 110px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+  }/*Name form. Sets the width to 15% of the screen, and has dull border if not selected.*/
+
+  #name:focus{
+    border: 3px solid #555;
+  }/*If the name form is in focus it has a dark border*/
+
+  #suburb{
+    width: 110px;
+    padding: 7px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    outline: none;
+  }/*Subrub form. Sets the width to 15% of the screen, and has dull border if not selected.*/
+
+  #suburb:focus{
+    border: 3px solid #555;
+  }/*If the suburb form is in focus it has a dark border*/
+
+  #score{
+    width: 50px;
+    padding: 4px 5px;
+    background-color: #f1f1f1;
+    border: 3px solid #ccc;
+    position: absolute;
+  }/*Score form. Sets the border to a dull colour*/
+
+  #score:focus {
+    border: 3px solid #555;
+  }/*If the score form is hovered it sets the border to a dark colour*/
+
+  #rating{
+    width: 70px;
+    padding: 4px 5px;
+    background-color: #f1f1f1;
+    border: 3px solid #ccc;
+    position: absolute;
+  }/*Rating form. Sets the border to a dull colour*/
+
+  #rating:focus {
+    border: 3px solid #555;
+  }/*If the rating form is hovered it sets the border to a dark colour*/
+
+  label{
+    position: absolute;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 14px;
+  }/*label stlye*/
+
+  .top{
+    bottom: 100%;
+    left: 0;
+  }/*labels appear on the top of forms*/
+
+  .topReview{
+    bottom: 100%;
+    left: 0;
+    font-size: 14px;
+  }/*labels style appear on the top of review forms*/
+
+  .first{
+    float:none;
+    padding: 0.5%;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 12px;
+    border-radius: 6px;
+    border-color: DarkSlateGray;
+    border-style: solid;
+    color:black;
+    position: absolute;
+    left:2.5%;
+    top:550px;
+    height: 150px;
+    width: 250px;
+    word-wrap: break-word;
+  }/*style and position of the first review*/
+
+  .second{
+    padding: 0.5%;
+    font-family: "futura-pt-n7","futura-pt",Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-size: 12px;
+    border-radius: 6px;
+    border-color: DarkSlateGray;
+    border-style: solid;
+    color:black;
+    position: absolute;
+    left:2.5%;
+    top:750px;
+    height: 150px;
+    width: 250px;
+    word-wrap: break-word;
+  }/*style and position of the second review*/
+
+  .reviewWrite{
+    width: 250px;
+    height:150px;
+    position: absolute;
+  } /*0position of the write review*/
+
+  div.Map{
+    position:absolute;
+    top:1175px;
+    left:7.5%;
+    width:82.5%;
+    border:5px solid DarkSlateGray;
+    height:250px;
+  }/*the image of the map style and position*/
+
+  div.Starsss{
+    position:absolute;
+    top:225px;
+    left:2.5%;
+    width:200px;
+    height:50px;
+  }/*the image of the stars style and position*/
+}
